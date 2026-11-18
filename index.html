@@ -111,7 +111,14 @@
     margin-bottom: 6px;
   }
   input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    text-align: left;
     font: inherit;
     font-size: 1.05rem;
     color: var(--ink);
@@ -121,6 +128,9 @@
     padding: 12px 14px;
     min-height: 50px;
   }
+  input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
+  input[type="date"]::-webkit-calendar-picker-indicator { margin-left: auto; }
+  .field { min-width: 0; }
   input[type="date"]:focus-visible { outline: none; border-color: var(--navy); }
   input[type="date"]:disabled { opacity: 0.45; }
 
@@ -286,7 +296,9 @@
 
   @media (max-width: 420px) {
     .sheet { padding: 24px 18px; border-radius: 24px; }
-    .verdict { font-size: 1.45rem; }
+    .verdict { font-size: 1.3rem; }
+    .badge { width: 38px; height: 38px; font-size: 1.1rem; }
+    .hero { padding: 44px 20px 104px; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .ribbon path { stroke-dasharray: 2600; stroke-dashoffset: 2600; animation: draw 1.6s ease-out 0.1s forwards; }
