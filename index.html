@@ -5,10 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>생결 계산기</title>
 <meta name="description" content="마지막으로 쓴 날만 넣으면, 생리결석을 언제 다시 쓸 수 있는지 알려 드려요.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%2300408F'/><circle cx='50' cy='50' r='16' fill='white'/></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
   :root {
     --navy: #00408F;
@@ -25,8 +23,8 @@
     --ok: #00408F;
     --on-navy: #FFFFFF;
     color-scheme: light;
-    --serif: "Gowun Batang", "AppleMyungjo", "Batang", serif;
-    --sans: "Gowun Dodum", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+    --sans: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+    --serif: var(--sans);
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -54,6 +52,8 @@
     font-family: var(--sans);
     font-size: 16px;
     line-height: 1.6;
+    letter-spacing: -0.01em;
+    word-break: keep-all;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -77,16 +77,10 @@
     position: relative;
     margin: 0;
     font-family: var(--serif);
-    font-size: clamp(2.4rem, 8vw, 3.6rem);
-    letter-spacing: -0.02em;
+    font-size: clamp(2.4rem, 8vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
     line-height: 1.15;
-  }
-  .hero h1 .moon {
-    display: inline-block;
-    width: 0.62em;
-    height: 0.62em;
-    margin-left: 0.18em;
-    vertical-align: 0.42em;
   }
   .hero p {
     position: relative;
@@ -152,7 +146,9 @@
     gap: 12px;
     margin: 0;
     font-family: var(--serif);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
     line-height: 1.3;
   }
   .badge {
@@ -181,7 +177,9 @@
   .next .date {
     display: block;
     font-family: var(--serif);
-    font-size: 1.45rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color: var(--ok);
     margin-top: 2px;
   }
@@ -303,7 +301,7 @@
     <path d="M-40 270 C 120 150, 230 330, 360 220 S 520 40, 600 130 S 650 290, 760 230 S 900 30, 1010 90 C 1080 130, 1040 210, 980 190 C 920 170, 1000 60, 1240 70"
           fill="none" stroke="var(--ribbon)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
-  <h1>생결 계산기<svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFF" d="M15.5 2.5a9.5 9.5 0 1 0 6 16.9A8 8 0 0 1 15.5 2.5Z"/></svg></h1>
+  <h1>생결 계산기</h1>
   <p>마지막으로 쓴 날만 넣으면, 언제 다시 쓸 수 있는지 알려 드려요.</p>
 </header>
 
@@ -366,7 +364,7 @@
   </div>
 </main>
 
-<footer>필요한 날, 마음 편히 쉬어요 🌙</footer>
+<footer>필요한 날, 마음 편히 쉬어요</footer>
 
 <script src="exams.js"></script>
 <script>
